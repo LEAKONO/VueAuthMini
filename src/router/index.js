@@ -3,11 +3,14 @@ import SignupPage from '../views/SignupPage.vue';
 import LoginPage from '../views/LoginPage.vue';
 
 const routes = [
+  { path: '/', redirect: '/signup' }, 
   { path: '/signup', component: SignupPage },
   { path: '/login', component: LoginPage },
 ];
 
-export default createRouter({
+const router = createRouter({
   history: createWebHistory(),
   routes,
 });
+
+export default router;
